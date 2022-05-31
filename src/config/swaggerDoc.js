@@ -23,7 +23,7 @@ const options = {
     },
   },
   swagger: "2.0",
-  basePath: "localhost:5000/",
+  basePath: "localhost:5001/",
   apis: [__dirname + "/src/routers/*.js", __dirname + "/src/swagger/*"],
 };
 

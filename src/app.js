@@ -6,6 +6,8 @@ import swaggerUi from "swagger-ui-express";
 import { specs } from "./config/swaggerDoc.js";
 import "./config/env.js";
 import * as Sentry from "@sentry/node";
+import compression from "compression";
+
 export const app = express();
 
 Sentry.init({
@@ -15,6 +17,7 @@ Sentry.init({
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(compression());
 
 if (process.env.NODE_ENV === "production") {
   app.use(
