@@ -29,7 +29,6 @@ if (process.env.NODE_ENV === "production") {
 }
 
 app.use(Sentry.Handlers.requestHandler());
-app.use(Sentry.Handlers.tracingHandler());
 
 app.use(
   "/swagger",
