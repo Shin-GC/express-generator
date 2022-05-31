@@ -1,5 +1,6 @@
 import { app } from "./src/app.js";
-import "./src/config/env.js"
+import "./src/config/env.js";
+import "./src/db/index.js";
 const PORT = process.env.PORT || 5001;
 
 app.listen(PORT, () => {
